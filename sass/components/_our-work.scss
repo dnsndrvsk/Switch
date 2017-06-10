@@ -1,0 +1,108 @@
+#our-work {
+  padding: 43px 124px 53px;
+  background-color: $green;
+  
+  @media (max-width: 1120px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .sect-header {
+    color: darken($green, 20%);
+    
+    &:after {
+      background-color: darken($green, 20%);
+    }
+  }
+  
+  .sect-sub-header {
+    margin-bottom: 60px;
+    color: darken($green, 15%);
+  }
+  
+  .kinds-of-works {
+    display: inline-block;
+    margin-bottom: 58px;
+    border: 1px solid darken($green, 20%);
+    border-radius: $radius-md;
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 0;
+    
+    a {
+      display: inline-block;
+      padding: 10px;
+      color: darken($green, 20%);
+      font-weight: $weight-norm;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    
+    .design {
+      border-right: 1px solid darken($green, 20%);
+      border-left: 1px solid darken($green, 20%);
+    }
+    
+    .selected {
+      color: #fff;
+      background-color: darken($green, 20%);
+    }
+  }
+  
+  .works-list {
+    font-size: 0;
+    text-align: center;
+    
+    @media (max-width: $width-lg) {
+      margin-bottom: 53px;
+    }
+  }
+    
+  .list-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 20%;
+    margin: 0;
+    margin-bottom: 30px;
+    transition: top 0.5s;
+
+    &:hover {
+      top: -10px;
+    }
+
+    @media (max-width: $width-lg) {
+      width: 50%;
+      margin-bottom: 0;
+
+      &:hover {
+        top: 0;
+      }
+    }
+
+    @media (max-width: $width-sm) {
+      width: 100%;
+    }
+
+    img {
+
+      @media (max-width: $width-lg) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  
+  .view-more {
+    position: relative;
+    padding: 10px 40px 10px 18px;
+    color: #fff;
+    text-decoration: none;
+    background: darken($green, 20%) url(
+          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAAYUlEQVQoU6XRyQ2AMAxE0T8VQCmUBJ1BJdDZoEScANlG5OrMkxcRPNsTcAADsEpa7t8VAa2WISmQISUgQjpg29koL/W+kz/AJmn+OsIOjEAPt65KwHWJR7gEROEUyMINOAHspzILuv8pWwAAAABJRU5ErkJggg==
+    ) no-repeat;
+    background-position: 94% 50%;
+    border-radius: $radius-md;
+   }
+}

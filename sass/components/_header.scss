@@ -1,0 +1,169 @@
+#header {
+  background: url("../img/header-bg.jpg") center no-repeat;
+  background-size: cover;
+  
+  .header-top {
+    position: relative;
+    margin-bottom: 240px;
+  }
+    
+  .main-nav {
+    margin-left: 18px;
+
+    @media(max-width: $width-md) {
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+      background: $green url(
+          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////5ubmueBsSwAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=
+      ) center no-repeat;
+      background-size: 70%;
+      border-radius: $radius-sm;
+      cursor: pointer;
+
+      &:hover .main-menu {
+        visibility: visible;
+        animation: reveal 0.3s ease;
+      }
+    }
+  }
+      
+  .main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media(max-width: $width-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $green;
+      z-index: 100;
+      visibility: hidden;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 6px;
+      padding: 12px 0;
+      overflow: hidden;
+
+      &:hover:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 140px;
+        height: 6px;
+        background-color: lighten($green, 10%);
+      }
+
+      @media(max-width: $width-md) {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid darken($green, 10%);
+
+        &:hover {
+          background-color: lighten($green, 10%);
+        }
+
+        &:hover:after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        @media(max-width: $width-md) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+    
+  .header-logo {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.3s;
+
+    @media(max-width: $width-lg) {
+      top: 100px;
+    }
+
+    @media(max-width: $width-md) {
+      top: 6px;
+    }
+  }
+    
+  .search {
+    margin: 5px 30px 0 0;
+    width: 0;
+    padding: 8px 6px;
+    padding-right: 30px;
+    background: #fff url(
+          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAYAAAD0f5bSAAABhElEQVQoU42SPYhTQRSFz8lLwAghMw9BSBVQC0FBrNRChbW3EbESO8FCWFgsbBQ7EWELQewUBJEttxcMgiDINgpisBAxFpK5N1n8KV5y5C15srs8xNsMc2e+c++cucQiut3uUpZldyXtB0AAv0mup5SWqzvVWh4iz/MVSfcAPJjP549brdZmURSnSN4GUJjZwe0gQwinSb6UdMbdB7tVY4xfSH5MKS39rRRjfA/glZld3Q2U+36/v2cymfySdNzdN8ocY4xfZ7PZ2el0OqyDylyM8QWAd2Z2vYI+tdvto6PR6Oc/oGeSWu5+oYK+kTyXUirbrI0Y40DSG3dfqaC3AIZmdqmO6HQ6+5rN5vdGo3F4PB5/2IJCCMdIbpC8mFJaq3HvM4DnZnZjxz+FEC6TfAJgTdJTAJskT5K8IukQgGtm9nAHtHDoCMlVSQcWE/GD5P2iKAZZlg0l3XL3O1vt1b2j1+vt3e5mnucnJL2WtOzuq7VQnVA1OQBu/jdUCoUQzgN49Afp46HTSqUqFAAAAABJRU5ErkJggg==
+    ) no-repeat;
+    background-position: 50% 50%;
+    color: #111;
+    opacity: 0.7;
+    outline: none;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+    transition: width 0.3s;
+
+    &:hover {
+      width: 170px;
+      opacity: 1;
+      background-position: 93% 50%;
+    }
+  }
+  
+  .work-with-us {
+    margin-bottom: 216px;
+    
+    .main-header {
+      margin-bottom: 30px;
+      
+      font-size: 55px;
+      color: #fff;
+      font-weight: $weight-bold;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 15px 26px;
+      font-size: 22px;
+      font-weight: $weight-norm;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: $radius-md;
+      background-color: $green;
+    }
+  }
+  
+  .scroll-down {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 30px 6px 10px;
+    color: #fff;
+    font-weight: $weight-norm;
+    text-decoration: none;
+    border-radius: $radius-md;
+    
+    background: #00aced url(
+          data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAe0lEQVQoU7XQXQ3CYAyF4acKmAUcIGFIwAkOCA5wgoRNwhxgYSgo6ZcsGcvCHb08b3/OafhRsbDM7DHgHBFj6f+CmdlFxLy92fTMnFBmToshlDYUnPHCHU9ccMOxYE2U9USHaq4UfYuyajjg3UDEtM5ZGx64Fvh6wt4XP61oPwAPjp0rAAAAAElFTkSuQmCC
+    ) no-repeat; 
+    background-position: 90% 55%;
+  }
+}
