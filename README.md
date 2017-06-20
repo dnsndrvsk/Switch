@@ -1,1 +1,1 @@
-# Switch - Responsive & Adaptive website
+# Switch - Responsive & Adaptive LP
